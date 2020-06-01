@@ -606,40 +606,110 @@ public class InicializaComponentes {
 	private void defineDonoObjetivos(Jogador[] listaJogadores) {
 		Objetivo Objtemp = new Objetivo();
 		
+/*– Conquistar na totalidade a EUROPA, a OCEANIA e mais um terceiro. OK
+– Conquistar na totalidade a ASIA e a AMÉRICA DO SUL. OK
+– Conquistar na totalidade a EUROPA, a AMÉRICA DO SUL e mais um terceiro. OK
+– Conquistar na totalidade a ASIA e a ÁFRICA. OK
+– Conquistar na totalidade a AMÉRICA DO NORTE e a ÁFRICA. OK
+– Conquistar 24 TERRITÓRIOS à sua escolha. OK
+– Conquistar na totalidade a AMÉRICA DO NORTE e a OCEANIA. OK
+– Destruir totalmente OS EXÉRCITOS AZUIS. OK
+– Destruir totalmente OS EXÉRCITOS AMARELOS. OK
+– Destruir totalmente OS EXÉRCITOS VERMELHOS. OK
+– Destruir totalmente OS EXÉRCITOS PRETOS. OK
+– Destruir totalmente OS EXÉRCITOS BRANCO. OK
+– Destruir totalmente OS EXÉRCITOS VERDES. OK */
+		
 		// Cria uma lista de objetivos padrão //
-		Objetivos = new Objetivo[6];		
+		Objetivos = new Objetivo[13];		
 		for ( int i=0; i < Objetivos.length;i++) {
 			Objetivos[i]= new Objetivo();
 		}
 		Objetivos[0].setContinentes(null); 		// Continentes necessários para ganhar					//
 		Objetivos[0].setDonoObjetivo(null); 	// Dono do Objetivo que será escolhido aleatoriamente 	//
 		Objetivos[0].setExercitos("Vermelho"); 	// Exército que precisa ser destrído para ganhar 		//
-		Objetivos[0].setTerritorios(0); 		// Quantidade de territórios necessários para ganhar	//
-				
-		Objetivos[1].setContinentes(null); 				
+		Objetivos[0].setTerritorios(1); 		// Quantidade de territórios necessários para ganhar	//
+		 
+		String[] eaS = new String [3];
+		eaS[0] = "europa";
+		eaS[1] = "americaSul";
+		eaS[2] = null;
+		Objetivos[1].setContinentes(eaS); 				
 		Objetivos[1].setDonoObjetivo(null); 	
 		Objetivos[1].setExercitos(null); 	
-		Objetivos[1].setTerritorios(25); 
+		Objetivos[1].setTerritorios(0); 
 
 		Objetivos[2].setContinentes(null); 				
 		Objetivos[2].setDonoObjetivo(null); 	
 		Objetivos[2].setExercitos("Verde"); 	
-		Objetivos[2].setTerritorios(10);
+		Objetivos[2].setTerritorios(1);
 		
 		Objetivos[3].setContinentes(null); 				
 		Objetivos[3].setDonoObjetivo(null); 	
 		Objetivos[3].setExercitos("Azul"); 	
-		Objetivos[3].setTerritorios(15);
+		Objetivos[3].setTerritorios(1);
 		
 		Objetivos[4].setContinentes(null); 				
 		Objetivos[4].setDonoObjetivo(null); 	
 		Objetivos[4].setExercitos("Preto"); 	
-		Objetivos[4].setTerritorios(5);		
+		Objetivos[4].setTerritorios(1);		
 		
 		Objetivos[5].setContinentes(null); 				
 		Objetivos[5].setDonoObjetivo(null); 	
 		Objetivos[5].setExercitos("Branco"); 	
-		Objetivos[5].setTerritorios(9);
+		Objetivos[5].setTerritorios(1);
+		
+		Objetivos[6].setContinentes(null); 				
+		Objetivos[6].setDonoObjetivo(null); 	
+		Objetivos[6].setExercitos("Amarelo"); 	
+		Objetivos[6].setTerritorios(1);
+
+		Objetivos[7].setContinentes(null); 				
+		Objetivos[7].setDonoObjetivo(null); 	
+		Objetivos[7].setExercitos(null); 	
+		Objetivos[7].setTerritorios(24);
+		
+		String[] aNo = new String [2];
+		aNo[0] = "americaNorte";
+		aNo[1] = "oceania";
+		Objetivos[8].setContinentes(aNo); 				
+		Objetivos[8].setDonoObjetivo(null); 	
+		Objetivos[8].setExercitos(null); 	
+		Objetivos[8].setTerritorios(0);
+		
+		String[] aNa = new String [2];
+		aNa[0] = "americaNorte";
+		aNa[1] = "africa";
+		Objetivos[9].setContinentes(aNa); 				
+		Objetivos[9].setDonoObjetivo(null); 	
+		Objetivos[9].setExercitos(null); 	
+		Objetivos[9].setTerritorios(0);
+		
+		String[] aa = new String [2];
+		aa[0] = "africa";
+		aa[1] = "asia";
+		Objetivos[10].setContinentes(aa); 				
+		Objetivos[10].setDonoObjetivo(null); 	
+		Objetivos[10].setExercitos(null); 	
+		Objetivos[10].setTerritorios(0);
+		
+		String[] aSa = new String [2];
+		aSa[0] = "americaSul";
+		aSa[1] = "asia";
+		Objetivos[11].setContinentes(aSa); 				
+		Objetivos[11].setDonoObjetivo(null); 	
+		Objetivos[11].setExercitos(null); 	
+		Objetivos[11].setTerritorios(0);
+		
+		String[] eo = new String [3];
+		eo[0] = "europa";
+		eo[1] = "oceania";
+		eo[2] = null;
+		Objetivos[12].setContinentes(eo); 				
+		Objetivos[12].setDonoObjetivo(null); 	
+		Objetivos[12].setExercitos(null); 	
+		Objetivos[12].setTerritorios(0);
+		
 		///				///				///
 		
 		// Escolhe um objetivo aleatório para os jogadores //
